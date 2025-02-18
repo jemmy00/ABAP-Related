@@ -1,0 +1,12 @@
+### Code
+**CAST** if_mr_api( cl_mime_repository_api=>if_mr_api~get_api( ) )->get(
+  **EXPORTING**
+    i_url = '/SAP/PUBLIC/male.png'
+  **IMPORTING**
+    e_content = DATA(male)
+  **EXCEPTIONS**
+    parameter_missing = 1 " Parameter missing or is initial
+    error_occured = 2 " Unspecified Error Occurred
+    not_found = 3 " Object not found
+    permission_failure = 4 " Missing Authorization
+).
